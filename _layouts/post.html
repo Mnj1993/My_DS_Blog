@@ -1,0 +1,96 @@
+---
+layout: default
+---
+
+<div class="post-container">
+    <p class="meta">
+        <small>
+        <!-- Date -->
+        <svg id="i-calendar" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9" /></svg>&nbsp;<time>{{page.date | date_to_string}}</time>&nbsp;
+        
+        
+        <!-- Views -->
+        <svg id="i-eye" viewBox="0 0 32 32" width="24" height="24" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="17" cy="15" r="1" />
+        <circle cx="16" cy="16" r="6" /><path d="M2 16 C2 16 7 6 16 6 25 6 30 16 30 16 30 16 25 26 16 26 7 26 2 16 2 16 Z" /></svg>&nbsp;<span class="post-view" id="ga-pageviews"></span>&nbsp;
+        
+        <!-- Reading time -->
+        <span class="read-time" title="Estimated read time">
+        <svg id="i-clock" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <circle cx="16" cy="16" r="14" />
+            <path d="M16 8 L16 16 20 20" />
+        </svg>       
+
+          {% assign words = content | number_of_words %}
+          {% if words < 360 %}
+            1 min read.
+          {% else %}
+            {{ words | divided_by:180 }} mins read.
+          {% endif %}
+        </span>&nbsp;         
+        </small>
+    </p>
+
+    <div class="desc">
+          <img class="post-image" width="100%" src="/thumbs/{{page.image}}" alt="{{page.title}}">
+          <p class="intro">{{page.desc | strip_html}}</p>
+      </div>
+
+   <article>
+      <main class="drop-cap">
+           {{page.content}}
+       </main>
+       
+ <!-- Author -->    
+{% if page.author == 'sharathdt' %}
+<p>This article is written by <strong>ashmin</strong> Follow him <a rel="nofollow" href="https://twitter.com/ashminswain">@ashminswain</a>.</p>
+{% endif %}
+      
+ <!-- Share --> 
+<div class="share">     
+<strong><p>Share this:</p></strong>  
+<ul>
+    <li><a href="https://twitter.com/intent/tweet?text={{page.title}}&url={{site.url}}{{page.url}}" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><img src="/{{ site.baseurl }}/img/social/twitter.svg" alt="twitter"></a></li>
+    
+    <li><a href="https://www.facebook.com/sharer/sharer.php?u={{site.url}}{{page.url}}" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><img src="/{{ site.baseurl }}/img/social/facebook.svg" alt="facebook"></a></li>
+   
+    <li><a href="http://www.reddit.com/submit?url={{site.url}}{{page.url}}" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"><img src="/{{ site.baseurl }}/img/social/reddit.svg" alt="reddit"></a></li>
+    
+    <li><a href="https://plus.google.com/share?url={{site.url}}{{page.url}}" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><img src="/{{ site.baseurl }}/img/social/google.svg" alt="google"></a></li>
+    
+    <li><a href="mailto:?subject={{page.title}}&amp;body=Check out this site {{site.url}}{{page.url}}"><img src="/{{ site.baseurl }}/img/social/gmail.svg" alt="email"></a></li>
+</ul>    
+</div>  
+
+            
+<!-- Tags -->
+ <div class="post-tags">
+  {% for tag in page.tags %}
+     <a class="tag-link" href="/tags/#{{tag|slugize}}">{{tag}}</a>{% unless forloop.last %}&nbsp;{% endunless %}
+  {% endfor %}&nbsp;
+ </div>      
+       
+ 
+
+   <div class="subscribe">
+    <div class="form">
+        <form action="" method="post" name="mc-embedded-subscribe-form" class="validate form-post" target="_blank" novalidate>
+            <h2 style="color:#fff">Get Free Updates</h2>
+            <div class="mc-field-group">
+                <input type="email" placeholder="Email" name="EMAIL" class="required email" id="mce-EMAIL" autocomplete="on">
+                <input type="submit" value="❤" name="subscribe" class="heart">
+            </div>
+        </form>
+   </div>         
+ </div>        
+ 
+                                                       
+    {% include prev-next.html %}
+    {% include disqus.html %}
+    {% include mathjax.html %}
+   </article>
+
+</div>
