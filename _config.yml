@@ -1,0 +1,102 @@
+#News
+news: true
+news-link: 'https://jekyll-themes.com/'
+#news-image: '/thumbs/subscribe-theme.png'
+news-alt: New Jekyll Themes
+
+
+# Site settings
+title: Data Science Blogs
+description: "This is one initiative to give back to the Data Science community what I am learning."
+url: https://ashminswain.github.io/blogs/
+enforce_ssl: ashminswain.github.io/blogs
+
+
+paginate: 9
+paginate_path: /page:num/
+
+
+author: 
+  twitter: ashminswain
+twitter:
+   site: ashminswain
+
+logo: /img/
+image: {{page.image}}
+facebook: https://www.facebook.com/ashmin.ajitav
+twitter: https://twitter.com/ashminswain
+github: https://github.com/AshminSwain
+youtube: https://www.youtube.com
+email: mailto:aaswain@syr.edu
+feedburner-subscribe: https://feedburner.google.com/ 
+analytics: 'UA-101540987-1'
+disqus-shortname: https-ashminswain
+copyrights-owner: Ashmin # Copyright in the footer
+feedly: 'http://cloud.feedly.com/'
+
+super-proxy: ''
+
+review-id: 'http://search.google.com/local/writereview?placeid=ChIJqWVVFw3z2YkR7WQ6KfBnLhA'
+
+
+
+# Build settings
+#baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
+markdown: kramdown
+encoding: utf-8
+source: .
+destination: ./_site
+permalink: /:title/
+paginate: 6
+paginate_path: /page:num/
+highlighter: rouge
+include: ["_pages"]
+
+sass:
+    style: compressed
+
+  
+keep_files: [README.md, CNAME, favicon.ico, robots.txt, js, thumbs, thumbs-small, img, data, svg]
+
+#optimization
+#compress.html
+compress_html:
+  clippings: [html,div, p, ul, td, h1, h2, h3, h4,link, meta, footer, nav, img, header, hr, br, head, style, li, ul, ol, time, main, script, title]
+  comments: ["<!-- ", " -->"]
+  endings: [all]
+  ignore:
+    envs: [local]
+  blanklines: false
+  profile: false
+  startings: []
+  
+#collection
+collections:
+    jekyll-themes:
+        output: true
+
+
+    
+authors:
+      ashmin:
+        display_name: Ashmin Ajitav Swain
+        about: Ashmin is a full-time graduate student in Syracuse University majoring in Information Management with concentration in Data Science." >Ashmin Blogs</a></p>
+        email: mailto:'aaswain@syr.edu'
+        web: https://ashminswain.github.io/blogs/
+        facebook: https://www.facebook.com/ashmin.ajitav
+        twitter: https://twitter.com/ashminswain
+        github: https://github.com/AshminSwain/
+        gravatar: 'https://www.gravatar.com/userimage/122334227/9ba97452642f44ab28c13545b033f32e?size=120'
+
+
+# No double inverted comma should be used inside the code
+amazon:
+    aff-link: "<a rel='nofollow' target='_blank' href='https://www.amazon.com/stream/ref=nav_upnav_LargeImage_Gateway?asCursor=WyIxLjYiLCJ0czEtd2VibGFiIiwiMTQ3NzI0MjAwMDAwMCIsIiIsIlMwMDAwOjA6bnVsbCIsIlMwMDAwOjI6MSIsIlMwMDAwOjA6LTEiLCJzIiwicGQyIiwiMTQ3NzI0MjAwMDAwMCIsInN1YjEiLCIxNDc3MjQxNTU5NTM5IiwiaGYxIiwiMTQ3NzIzODQwMDAwMCIsInYxIiwiMTQ3NzIzMzYwMDAwMCJd&asCacheIndex=0&asYOffset=-262&_encoding=UTF8&tag=webjeda-20&linkCode=ur2&linkId=026751bde08db535920e2dca09a2ccd8&camp=1789&creative=9325'><img src='/img/amz-interesting.png' /></a>"
+    
+    
+plugins: [jekyll-paginate, jemoji, jekyll-seo-tag, jekyll-admin]
+
+review: 
+    place-id: ChIJqWVVFw3z2YkR7WQ6KfBnLhA
+    link: https://goo.gl/8wywXz
+    short-link: https://goo.gl/8wywXz
