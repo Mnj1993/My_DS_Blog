@@ -1,0 +1,27 @@
+---
+layout: page
+permalink: /tags/
+title: Tags
+desc: Find all the data science blogs arranged according to their categories.
+adallow: 0
+inmenu: 0
+---
+
+<div id="archives">
+{% for tag in site.tags %}
+  <div class="archive-group">
+    {% capture tag_name %}{{ tag | first }}{% endcapture %}
+    <div id="#{{ tag_name | slugize }}"></div>
+    <a name="{{ tag_name | slugize }}"></a>
+    <p></p>
+    
+    <h2 class="tag-head">{{ tag_name }}</h2>
+
+    {% for post in site.tags[tag_name] %}
+    <article class="archive-item">
+      <p style="margin-bottom:10px"><a href="{{ post.url | prepend: site.url }}">{{post.title}}</a></p>
+    </article>
+    {% endfor %}
+  </div>
+{% endfor %}
+</div>
