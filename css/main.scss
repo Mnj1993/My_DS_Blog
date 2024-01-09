@@ -14,59 +14,8 @@ $base-lh:          1.7;
 $spacing-unit:     30px;
 $color:            rgba(0, 0, 0, 0.7);
 
-/* Violet */
-$brand-color:      #7E57C2;
-$brand-color-2:    #673AB7; 
-
-/* Green */
-$brand-color:      #66BB6A;
-$brand-color-2:    #43A047; 
-
-/* Yellow */
-$brand-color:      #FFCA28;
-$brand-color-2:    #FFB300; 
-
-/* Biscuit */
-$brand-color:      #FF7043;
-$brand-color-2:    #f44336; 
-
-/* Orange */
-$brand-color:      #FF8F00;
-$brand-color-2:    #FFC107; 
-
-/* Forest */
-$brand-color:      #2E7D32;
-$brand-color-2:    #66BB6A; 
-
-/* Bright Green */
-$brand-color:      #00C853;
-$brand-color-2:    #00E676; 
-
-/* Bright Yellow */
-$brand-color:      #FFAB00;
-$brand-color-2:    #FFC400; 
-
-/* Bright Yellow 2 */
-$brand-color:      #F9A825;
-$brand-color-2:    #FF6F00; 
-
-/* Bright Yellow 2 */
-$brand-color:      #0091EA;
-$brand-color-2:    #304FFE; 
-
-/* Biscuit!! */
-$brand-color:      #ef5350;
-$brand-color-2:    #FF5722; 
-
-
-/* Biscuit-best */
-$brand-color:      #e53935;
-$brand-color-2:    #e35d5b; 
-
-/* Emerald!! */
-/* $brand-color:      #2b8a2f; */
-$brand-color-2:    #00C853; 
-$brand-color:    darken($brand-color-2, 10%);
+$brand-color:      #0D47A1;
+$brand-color-2:    #1565C0; 
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -96,5 +45,11 @@ $on-laptop:        800px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "error"
+        "base",
+        "home",
+        "style",
+        "post",
+        "page",
+        "pagination",
+        "syntax-highlighting"
 ;
