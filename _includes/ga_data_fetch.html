@@ -1,0 +1,9 @@
+<!-- Old script -->
+<!-- <script async>var jqxhr=$.ajax("{{ site.super-proxy }}").done(function(b){if(void 0!==b){var c=void 0,a=void 0,d={},a=b.totalsForAllResults["ga:pageviews"];void 0!==a&&null!==a&&$("#ga-totalpageviews-div")&&$("#ga-totalpageviews").html(""+a);void 0!==b.rows&&(jQuery.each(b.rows,function(b,a){var e=a[0];"{{ page.url }}"===e&&(c=a[1],void 0!==c&&null!==c&&$("#ga-pageviews-div")&&$("#ga-pageviews").html(""+c));d[e]=a[3]}),$("span[data-post-url]").each(function(a){a=$(this).attr("data-post-url");void 0!==
+d[a]&&null!==d[a]&&$(this).html("Views: "+d[a])}))}}).fail(function(b){console.log("Failed to get GA data")});</script> -->
+
+
+
+<script>(function(b){function g(a){return(a=window.localStorage.getItem(a))?JSON.parse(a):a}var e={};b.cachedAjaxPromise=function(a,c){var d=e[a],f;d||(d=new jQuery.Deferred,e[a]=d,(f=g(a))&&d.resolve(f),c||(c={}),b.extend(c,{error:function(a,c,b){console.log("User info request failed: "+b);d.resolve(null)},success:function(b){var c=JSON.stringify(b);window.localStorage.setItem(a,c);d.resolve(b)}}),b.ajax(a,c));return d.promise()}})(jQuery);</script>
+<script>oPromise=$.cachedAjaxPromise("{{ site.super-proxy }}").done(function(b){if(void 0!==b){var c=void 0,a=void 0,d={},a=b.totalsForAllResults["ga:pageviews"];void 0!==a&&null!==a&&$("#ga-totalpageviews-div")&&$("#ga-totalpageviews").html(""+a);void 0!==b.rows&&(jQuery.each(b.rows,function(b,a){var e=a[0];"{{ page.url }}"===e&&(c=a[1],void 0!==c&&null!==c&&$("#ga-pageviews-div")&&$("#ga-pageviews").html(""+c));d[e]=a[3]}),$("span[data-post-url]").each(function(a){a=$(this).attr("data-post-url");void 0!==
+d[a]&&null!==d[a]&&$(this).html("Views: "+d[a])}))}}).fail(function(b){console.log("Failed to get GA data")});</script>

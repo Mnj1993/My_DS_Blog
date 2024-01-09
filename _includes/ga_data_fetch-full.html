@@ -1,0 +1,67 @@
+<!-- <script>
+var jqxhr = $.ajax("{{ site.super-proxy }}").done(function(b) {
+    if (void 0 !== b) {
+        var c = void 0,
+            a = void 0,
+            d = {},
+            a = b.totalsForAllResults["ga:pageviews"];
+        void 0 !== a && null !== a && $("#ga-totalpageviews-div") && $("#ga-totalpageviews").html("" + a);
+        void 0 !== b.rows && (jQuery.each(b.rows, function(b, a) {
+            var e = a[0];
+            "{{ page.url }}" === e && (c = a[1], void 0 !== c && null !== c && $("#ga-pageviews-div") && $("#ga-pageviews").html("" + c));
+            d[e] = a[3]
+        }), $("span[data-post-url]").each(function(a) {
+            a = $(this).attr("data-post-url");
+            void 0 !==
+                d[a] && null !== d[a] && $(this).html("Views: " + d[a])
+        }))
+    }
+}).fail(function(b) {
+    console.log("Failed to get GA data")
+});
+</script>
+
+
+
+
+<script>
+oPromise = $.cachedAjaxPromise('https://api.github.com/repos/{{post.user}}/{{post.repo}}?access_token={{site.token}}').done(function(o) {
+    $('.theme-date{{forloop.index}}').append(o.created_at.split('T')[0]);
+    $("#forks{{forloop.index}}").append(o.forks);
+    $('.avatar{{forloop.index}}').attr('style', 'background-image: url(' + o.owner.avatar_url + '&s=32)');  
+    var hp = o.homepage;
+    var ck = "http";
+    if(hp != null && hp.indexOf(ck) != -1){
+    $('#demo{{forloop.index}}').attr('href', o.homepage);
+    }
+    else {
+    $('#demo{{forloop.index}}').attr('href', "http://" + o.homepage);
+    }
+});
+</script>
+ -->
+
+<script src="/js/cache-promise.min.js"></script>
+
+<script>
+oPromise = $.cachedAjaxPromise("{{ site.super-proxy }}").done(function(o) {
+    if (void 0 !== o) {
+        var c = void 0,
+            a = void 0,
+            d = {},
+            a = o.totalsForAllResults["ga:pageviews"];
+        void 0 !== a && null !== a && $("#ga-totalpageviews-div") && $("#ga-totalpageviews").html("" + a);
+        void 0 !== o.rows && (jQuery.each(o.rows, function(o, a) {
+            var e = a[0];
+            "{{ page.url }}" === e && (c = a[1], void 0 !== c && null !== c && $("#ga-pageviews-div") && $("#ga-pageviews").html("" + c));
+            d[e] = a[3]
+        }), $("span[data-post-url]").each(function(a) {
+            a = $(this).attr("data-post-url");
+            void 0 !==
+                d[a] && null !== d[a] && $(this).html("Views: " + d[a])
+        }))
+    }
+}).fail(function(o) {
+    console.log("Failed to get GA data")
+});
+</script>

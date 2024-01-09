@@ -1,0 +1,98 @@
+$base-ff:         -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+$head-ff:         -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+$base-fs:          22px;
+$base-fw:          400;
+$small-fs:         $base-fs * 0.775;
+$base-lh:          1.7;
+$spacing-unit:     30px;
+$color:            rgba(0, 0, 0, 0.7);
+
+/* Violet */
+$brand-color:      #7E57C2;
+$brand-color-2:    #673AB7; 
+
+/* Green */
+$brand-color:      #1565C0;
+$brand-color-2:    #43A047; 
+
+/* Yellow */
+$brand-color:      #FFCA28;
+$brand-color-2:    #FFB300; 
+
+/* Biscuit */
+$brand-color:      #FF7043;
+$brand-color-2:    #f44336; 
+
+/* Orange */
+$brand-color:      #FF8F00;
+$brand-color-2:    #FFC107; 
+
+/* Forest */
+$brand-color:      #2E7D32;
+$brand-color-2:    #66BB6A; 
+
+/* Bright Green */
+$brand-color:      #1565C0;
+$brand-color-2:    #00E676; 
+
+/* Bright Yellow */
+$brand-color:      #FFAB00;
+$brand-color-2:    #FFC400; 
+
+/* Bright Yellow 2 */
+$brand-color:      #F9A825;
+$brand-color-2:    #FF6F00; 
+
+/* Bright Yellow 2 */
+$brand-color:      #0091EA;
+$brand-color-2:    #304FFE; 
+
+/* Biscuit!! */
+$brand-color:      #ef5350;
+$brand-color-2:    #FF5722; 
+
+
+/* Biscuit-best */
+$brand-color:      #e53935;
+$brand-color-2:    #e35d5b; 
+
+/* Emerald!! */
+/* $brand-color:      #2b8a2f; */
+$brand-color-2:    #00C853; 
+$brand-color:    darken($brand-color-2, 10%);
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "home",
+        "style",
+        "post",
+        "page",
+        "syntax-highlighting"
+;

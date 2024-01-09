@@ -1,0 +1,15 @@
+
+ <div class="p-n">
+ <h3>Read next</h3>
+  {% if page.previous.url %}
+    <a class="prev" href="{{page.previous.url}}"><svg id="i-arrow-left" viewBox="0 0 32 1" width="32" height="32" fill="none" stroke="#cfcfcf" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <path d="M10 6 L2 16 10 26 M2 16 L30 16" />
+</svg> &nbsp;{{page.previous.title}}</a>
+  {% endif %}
+  {% if page.next.url %}
+    <a class="next" href="{{page.next.url}}">{{page.next.title}}&nbsp;<svg id="i-arrow-right" viewBox="0 0 32 1" width="32" height="32" fill="none" stroke="#cfcfcf" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <path d="M22 6 L30 16 22 26 M30 16 L2 16" />
+</svg></a>
+  {% endif %}
+</div>
+<div class="clear"></div>

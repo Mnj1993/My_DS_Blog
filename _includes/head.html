@@ -1,0 +1,77 @@
+ <!-- Head -->
+    <head>
+    <!-- Meta -->
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="generator" content="Jekyll 3.0">
+    <title>{%if page.title %}{{ page.title }} {% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{% if page.desc %}{{ page.desc | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}" />
+
+    <!-- Open Graph -->
+    <meta property="fb:app_id" content="">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:image" content="{{ site.url }}/thumbs/{{ page.image }}" />
+    <meta property="og:site_name" content="DataScience Blog">
+    <meta property="article:publisher" content="http://www.facebook.com/ashmin.ajitav" />
+    <meta property="article:author" content="https://www.facebook.com/ashmin.ajitav" />
+    <meta property="article:published_time" content="{{ page.date }}" />
+    <meta property="og:description" content="{% if page.desc %}{{ page.desc }}{% else %}{{ site.description }}{% endif %}">
+
+
+         <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.desc %}{{ page.desc }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="twitter:site" content="@ashminswain" />
+    <meta name="twitter:creator" content="@ashminswain">
+    <meta name="twitter:card" content="summary">
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "TechArticle",
+        "name": "DataScience Blogs | {%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}",
+        "headline": "{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}",
+        {%if page.image %}"image": "{{site.url}}/thumbs/{{ page.image }}",{% else %}"image": "{{site.url}}/img/{{ site.logo }}",{% endif %}
+        "description": "{% if page.desc %}{{ page.desc}}{% else %}{{ site.description}}{% endif %}",
+        "logo": "http://blog.webjeda.com/img/webjeda-logo.svg",
+        "url": "{{ site.url }}{{ page.url }}"
+      }
+    </script>
+
+        <!-- RSS -->
+    <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />  
+
+        <!-- Bing Auth-->
+    <meta name="msvalidate.01" content="" />
+
+        <!-- Canonical -->
+    <link rel="canonical" href="{{ page.url | prepend: site.url }}">
+
+       <!-- Publisher -->
+    <link rel="publisher" href="https://plus.google.com/104018354357909665325"/>
+
+        <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/img/favicon.ico" />
+
+     <!-- Apple touch icons -->
+    <link rel="apple-touch-icon-precomposed" href="/img/apple-touch-icon-iphone-60x60.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-ipad-retina-152x152.png">
+
+      <!-- CSS -->
+    <link rel="stylesheet" href={{ site.baseurl }}/"/css/main.scss">
+
+      <!-- Google TagManager --> 
+    {% include google-tag-manager-head.html %}
+
+    <!-- Google Adsense --> 
+     {% if site.ad == 'no' %}{% else %}  
+     {% if page.layout == 'post' %}
+        {% include ad-script.html %}
+     {% endif %}
+    {% endif %}
+    </head>

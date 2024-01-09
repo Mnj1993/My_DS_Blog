@@ -1,0 +1,73 @@
+<header class="site-header">
+  <div class="wrapper">
+      <a href="{{ site.baseurl }}/"><img alt="webjeda logo" id="logo" width="200" src=""></a> 
+
+  </div>
+  <!-- Use any element to open/show the overlay navigation menu -->
+<div onclick="openNav()" id="menu-ic" class="menu-icon">
+<svg id="i-menu" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+    <path d="M4 8 L28 8 M4 16 L28 16 M4 24 L28 24" />
+</svg>    
+</div>
+
+
+
+<!-- The overlay -->
+<div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+   
+   <div class="nav-box">
+       <h2>Pages</h2>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/search/">Search</a>
+   </div>
+   <div class="nav-box">
+       <h2>Themes</h2>
+        <a href="/jekyll-themes/hagura/">Hagura</a>
+        <a href="/jekyll-themes/karna/">Karna</a>
+        <a href="/jekyll-themes/vyaasa/">Vyaasa</a>
+        <a href="/jekyll-themes/cards/">Cards</a>
+        <a href="/jekyll-themes/online-cv/">Online CV</a>
+   </div>
+
+    </div>
+</div>
+</header>
+
+
+
+
+<!-- 
+<script>
+function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+}
+
+var lastScrollTop = 0;
+
+window.addEventListener("scroll", function(){  
+   var st = window.pageYOffset || document.documentElement.scrollTop;  
+   if (st > lastScrollTop){
+       document.getElementById("menu-ic").style.opacity = "0";
+   } else {
+      document.getElementById("menu-ic").style.opacity = "1";
+   }
+   lastScrollTop = st;
+}, false);
+    
+</script> -->
+
+<script>function openNav(){document.getElementById("myNav").style.height="100%"}function closeNav(){document.getElementById("myNav").style.height="0%"}var lastScrollTop=0;window.addEventListener("scroll",function(){var a=window.pageYOffset||document.documentElement.scrollTop;a>lastScrollTop?document.getElementById("menu-ic").style.opacity="0":document.getElementById("menu-ic").style.opacity="1";lastScrollTop=a},!1);</script>
+
+
+

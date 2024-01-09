@@ -1,0 +1,19 @@
+<script async>
+$(document).ready(function() {
+    $('.show-comments').on('click', function(){
+          var disqus_shortname = '{{site.disqus-shortname}}'; 
+          var disqus_config = function () {
+                this.page.url = 'https://ashminswain.github.io/blogs{{page.url }}';
+            };   
+          $.ajax({
+                  type: "GET",
+                  url: "https://" + disqus_shortname + ".disqus.com/embed.js",
+                  dataType: "script",
+                  cache: true
+          });
+
+          $(this).fadeOut();
+    });
+});
+
+</script>
