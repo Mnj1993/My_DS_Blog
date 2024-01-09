@@ -1,0 +1,139 @@
+
+header {
+    padding: 5em 1em 3em 1em;
+        padding: 1em 1em 1em 1em;
+
+    background: $brand-color; 
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-bottom: 1px solid transparent;
+    margin-bottom: 1em;
+    .post-title {
+        color: #fff;
+        font-size: 2.5em;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+        max-width: 70%;
+    
+        @include media-query($on-palm) {
+            font-size: 1.8em;
+            max-width: 80%;
+        }
+
+    }
+    @include media-query($on-palm) {
+        padding: 3em 0.25em 1em 0.25em;
+        width: 100%;
+    }
+}
+
+
+
+.container {
+    padding: 0 10px;
+    @include media-query($on-laptop) {
+        padding: 0;
+    }
+    }
+
+
+
+
+footer {
+    padding: 2em 1em 2em 1em;
+    margin-top: 2em;
+    background-color: lighten($grey-color, 40%);
+    background-image: url(/images/pattern.png);
+    color: lighten($color, 40%);
+    font-size: $small-fs;
+    .logo-wj {
+        width: 200px;
+        filter: grayscale(100%);
+        opacity: 0.2;
+        transition: 0.2s ease-in;
+        &:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+    }
+    .foot-left, .foot-center, .foot-right{
+        display: inline-block;
+        width: 33%;
+        @include media-query($on-laptop) {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .foot-left {
+                text-align: left;
+        @include media-query($on-laptop) {
+                text-align: center;
+            }
+        }
+    
+    .foot-center {
+        text-align: center;
+        vertical-align: middle;
+        p {
+            margin: 0;
+            @include media-query($on-laptop) {
+                margin: 1em 0;
+            }
+        }
+
+    }
+    .foot-right {
+        text-align: right;
+        ul {
+            list-style: none;
+            @include media-query($on-laptop) {
+                   margin-left: 0;
+                   padding-left: 0
+                    }
+            li {
+                    display: inline-block;
+                    margin-left: 10px;
+                    
+                }
+            }
+            @include media-query($on-laptop) {
+                padding-left: 0;
+                text-align: center;
+            }
+    }
+}
+
+
+
+.logo {
+    background-image: url(/img/home.png);
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    width: 96px;
+    height: 96px;
+    opacity: 0.8;
+    -webkit-transition: all 0.7s ease-out;
+       -moz-transition: all 0.7s ease-out;
+        -ms-transition: all 0.7s ease-out;
+         -o-transition: all 0.7s ease-out;
+            transition: all 0.7s ease-out;
+        
+    &:hover {
+        top: 5%;
+
+    }
+    @include media-query($on-palm) {
+        top: 5%;
+        left: 4%;
+        width: 40px;
+        height: 40px;
+        &:hover {
+            top: 3%;
+        }
+    }
+
+}
