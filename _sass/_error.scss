@@ -1,0 +1,25 @@
+.error {
+    position: relative;
+    width: 100vw;
+    left: calc(-50vw + 50%);
+    background-image: url(/img/404.svg);
+    background-image: url(/img/404.svg);
+    background: url(/img/404.svg), -webkit-linear-gradient(120deg, $brand-color, $brand-color-2);
+    background:url(/img/404.svg), -o-linear-gradient(120deg, $brand-color, $brand-color-2);
+    background: url(/img/404.svg), linear-gradient(120deg, $brand-color, $brand-color-2); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 800px;
+    padding: 4em;
+    margin-bottom: -2em;
+    h1, p {
+        color: #eee;
+    }
+    @include media-query($on-palm) {
+          font-size: $small-fs*0.8;
+          height: 300px;  
+          padding: 1em;
+          margin-bottom: -2.5em;
+    }
+    
+}

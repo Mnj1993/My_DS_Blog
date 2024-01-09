@@ -1,0 +1,67 @@
+#mainbox {
+    font-family: inherit;
+    box-sizing: border-box;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 300px;
+    margin: 0 auto;
+    a {
+        text-decoration: none;
+        color: $color;
+    }
+}
+
+
+
+.card {
+    width: 300px;
+    box-shadow: 0px 0px 5px #ccc;
+    border-radius: 2px;
+    margin: 20px;
+    text-align: center;
+    transition: 0.2s ease-in;
+    position: relative;
+    &:hover {
+        box-shadow: 0px 0px 15px #aaa;
+    }
+}
+
+.card-footer {
+    padding: 5px;
+    margin: 0;
+    border: none;
+    h2 {
+         margin: 0;
+         font-size: $small-fs;
+         color: $grey-color;
+    }
+}
+
+.post-excerpt {
+    font-size: $small-fs;
+    margin-bottom: 0.2em;
+    margin-top: 0.2em;
+}
+
+.post-image-index {
+    border-bottom: 1px solid lighten($grey-color, 40%);
+    
+}
+
+hr {
+    border:none;
+    border-top: 1px solid lighten($grey-color, 40%);
+    margin: 5px 0;
+}
+
+/* .news {
+    max-width: 400px;
+    margin: 1em auto;
+    text-align: center;
+    background-color: #e26f6f; 
+    color: #eee;
+    border-radius: 5px;
+    padding: 5px 0;
+    font-size: $small-fs;
+} */

@@ -1,0 +1,79 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    height: 5px;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: darken(#1895c2, 20%);
+}
+
+::-webkit-scrollbar-track {
+    background-color: #EEE;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: $base-ff;
+    background: transparent;
+    font-size: $base-fs;
+    line-height: $base-lh;
+    color: $color;
+    font-weight: $base-fw;
+    -moz-font-feature-settings:"kern" 1; 
+    -ms-font-feature-settings:"kern" 1; 
+    -o-font-feature-settings:"kern" 1; 
+    -webkit-font-feature-settings:"kern" 1; 
+    font-feature-settings:"kern" 1;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    @include media-query($on-palm) {
+        font-size: 18px;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $head-ff;
+    font-weight: 700;
+}
+
+a {
+    color: $brand-color;
+    text-decoration: none;
+    transition: 0.2s ease-in;
+    &:hover {
+        color: $color;
+    }
+}
+
+code, pre {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+
+pre {
+    border: 1px solid lighten($grey-color, 40%);
+    padding-left: 1em;
+    border-radius: 4px;
+
+}
+
+pre code {
+    font-size: 15px;
+}
+
+img {
+    max-width: 100%;
+}
+
+figure {
+    max-width: 100%;
+}
